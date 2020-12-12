@@ -1,0 +1,13 @@
+server:
+  port: 8001
+spring:
+  kafka:
+    producer:
+      bootstrap-servers:
+        - 127.0.0.1:9092
+      retries: 0
+      batch-size: 16384
+      key-serializer: org.apache.kafka.common.serialization.StringDeserializer
+      value-serializer: org.apache.kafka.common.serialization.StringDeserializer
+      acks: all
+
